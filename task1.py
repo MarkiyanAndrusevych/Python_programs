@@ -1,69 +1,45 @@
-# #first task
-# class Polygon:
-#     def __init__(self, sides):
-#         self.sides = sides
+# #task1
+# def age_entering():
+#     while True:
+#         try:
+#             age = int(input("Enter your age: "))
+#             if age < 0:
+#                 raise ValueError("Age can't be negative.")
+#             else:
+#                 if age % 2 == 0:
+#                     print("Your age is even.")
+#                 else:
+#                     print("Your age is odd.")
+#         except ValueError as e:
+#             print(e)
 #
-#     def find_area(self):
-#         pass
-#
-#
-# class Rectangle(Polygon):
-#     def __init__(self, length, width):
-#         super().__init__(4)
-#         self.length = length
-#         self.width = width
-#
-#     def find_area(self):
-#         return self.length * self.width
-#
-# my_rect = Rectangle(20, 10)
-# print(my_rect.find_area())
+# age_entering()
 
-# #second task
-# class Human:
-#     species = "Homosapiens"
+# #task2
+# def day_of_week():
+#     while True:
+#         try:
+#             day_number = int(input("Enter a number between 1 and 7 to get the proper day of the week\n"))
+#             if day_number >= 1 and day_number <= 7:
+#                 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+#                 day = days[day_number -1]
+#                 print(f"Your day is {day}")
+#             else:
+#                 print("Enter number between 1 and 7")
+#         except ValueError:
+#             print("Invalid input! Please enter a number.")
 #
-#     def __init__(self, name):
-#         self.name = name
 #
-#     def welcome_message(self):
-#         return f"Hello, my name is {self.name}"
-#
-#     def get_species(self):
-#         return f"I beyond to {self.species}"
-#
-#     def arbitrary_message(self):
-#         return "I love python"
-#
-# first = Human("Marik")
-#
-# print(first.get_species())
-# print(first.welcome_message())
-# print(first.arbitrary_message())
+# day_of_week()
 
-# #third task
-# class Employee:
-#     total_employees = 0
-#     def __init__(self, name, salary):
-#         self.name = name
-#         self.salary = salary
-#         Employee.total_employees += 1
-#
-#     def display_employees(self):
-#         return f"Total employees: {self.total_employees} "
-#
-#     def info_about_employees(self):
-#         return f"Info: Name: {self.name}, Salary: {self.salary} "
-#
-# first = Employee("Marik", 3000)
-#
-# print(first.info_about_employees())
-# print(Employee.total_employees)
-#
-# print(f"Base Classes: {Employee.__bases__}")
-# print(f"Class Namespace: {Employee.__dict__}")
-# print(f"Class Name: {Employee.__name__}")
-# print(f"Module Name: {Employee.__module__}")
-# print(f"Documentation String: {Employee.__doc__}")
-
+def divide(numerator, denominator):
+    try:
+        numerator = float(numerator)
+        denominator = float(denominator)
+        result = numerator / denominator
+        return f"Result is {result}"
+    except ZeroDivisionError:
+        return f"Oops, {numerator} / {denominator}, division by zero is error!!!"
+    except ValueError:
+        return "Value Error! You did not enter a number!"
 
